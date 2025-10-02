@@ -1,40 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Host Container App
 
-## Getting Started
+This is the **Host application** built with **Next.js** and **Module Federation**.  
+It consumes the **Auth App** (remote application) and integrates its authentication components (e.g., Login Page) into the host.  
 
-First, run the development server:
+## 🔗 Micro Frontend Setup
 
+- **Host App**: Loads remote modules using `@module-federation/nextjs-mf`.  
+- **Auth App**: Exposed as a remote and provides authentication-related components.  
+- When the Auth App is running, the Host App can call and render the **Login Page** directly.  
+
+---
+
+## 🚀 Features
+- Next.js 13+ with Webpack 5 Module Federation
+- Remote module loading with `@module-federation/nextjs-mf`
+- `Auth App` integrated via `remotes` configuration
+- Environment variable support (`NEXT_PUBLIC_AUTH_API_URL`)
+- Top-level await & Webpack layers enabled
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the Host App
 ```bash
+git clone https://github.com/sangeethaarasu01-bot/Host-Container-App.git
+
+cd Host-Container-App
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
