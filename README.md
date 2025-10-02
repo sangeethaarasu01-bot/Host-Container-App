@@ -17,6 +17,7 @@ It consumes the **Auth App** (remote application) and integrates its authenticat
 - `Auth App` integrated via `remotes` configuration
 - Environment variable support (`NEXT_PUBLIC_AUTH_API_URL`)
 - Top-level await & Webpack layers enabled
+- ✅ **Dynamic Import of Micro-Frontends** – remotes are loaded at runtime from a **config file**, making the setup more flexible and environment-independent
 
 ---
 
